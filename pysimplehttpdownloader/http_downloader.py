@@ -2,12 +2,14 @@
 
 import sys
 import urllib.request
+import os.path
 
 
 class HTTPDownloader(object):
 
-    def __init__(self, url=None, output_name=None):
+    def __init__(self, url=None, output_path="", output_name=None):
         self.__url = url
+        self.__output_path = output_path
         self.__output_name = output_name
 
     # https://stackoverflow.com/a/13895723
@@ -29,7 +31,9 @@ class HTTPDownloader(object):
     def run(self):
         __filename, __headers = urllib.request.urlretrieve(
             self.__url,
-            filename=self.__output_name if self.__output_name else self.__url.split("/")[-1],
+            filename=os.path.join(self.__output_path,
+                                  (self.__output_name if self.__output_name else self.__url.split("/")[-1])
+                                  ),
             reporthook=self.__reporthook__)
         return __filename, __headers
 
