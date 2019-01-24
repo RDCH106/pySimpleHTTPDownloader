@@ -6,6 +6,7 @@ class HTTPDownloader(object):
 
     def __init__(self, url=None, output_name=None):
         self.__url = url
+        self.__output_name = output_name
 
     # https://stackoverflow.com/a/13895723
     @staticmethod
@@ -27,7 +28,7 @@ class HTTPDownloader(object):
         print("download start!")
         filename, headers = urllib.request.urlretrieve(
             self.__url,
-            filename=self.__url.split("/")[-1],
+            filename=self.__output_name if self.__output_name else self.__url.split("/")[-1],
             reporthook=self.__reporthook__)
         print("download complete!")
         print("download file location: ", filename)
