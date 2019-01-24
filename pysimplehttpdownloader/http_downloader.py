@@ -7,6 +7,7 @@ class HTTPDownloader(object):
     def __init__(self, url=None, output_name=None):
         self.__url = url
 
+    # https://stackoverflow.com/a/13895723
     @staticmethod
     def __reporthook__(blocknum, blocksize, totalsize):
         readsofar = blocknum * blocksize
