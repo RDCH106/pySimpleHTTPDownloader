@@ -25,18 +25,19 @@ class HTTPDownloader(object):
             sys.stderr.write("read %d\n" % (readsofar,))
 
     def run(self):
-        print("download start!")
         filename, headers = urllib.request.urlretrieve(
             self.__url,
             filename=self.__output_name if self.__output_name else self.__url.split("/")[-1],
             reporthook=self.__reporthook__)
-        print("download complete!")
-        print("download file location: ", filename)
-        print("download headers: ", headers)
+        return filename, headers
 
 
 if __name__ == "__main__":
+    print("download start!")
     downloader = HTTPDownloader(
         "https://raw.githubusercontent.com/RDCH106/i-love-firefox/183266a9/I_Love_Firefox_220x56.png"
     )
-    downloader.run()
+    filename, headers = downloader.run()
+    print("download complete!")
+    print("download file location: ", filename)
+    print("download headers: ", headers)
