@@ -3,3 +3,6 @@ __pycache__/
 .idea/
 dist
 build
+tests/tmp/*
+!tests/tmp/dummy.txt
+**_trial_temp*/
