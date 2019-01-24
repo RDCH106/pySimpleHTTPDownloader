@@ -25,11 +25,11 @@ class HTTPDownloader(object):
             sys.stderr.write("read %d\n" % (readsofar,))
 
     def run(self):
-        filename, headers = urllib.request.urlretrieve(
+        __filename, __headers = urllib.request.urlretrieve(
             self.__url,
             filename=self.__output_name if self.__output_name else self.__url.split("/")[-1],
             reporthook=self.__reporthook__)
-        return filename, headers
+        return __filename, __headers
 
 
 if __name__ == "__main__":
