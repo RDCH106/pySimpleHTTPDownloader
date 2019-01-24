@@ -6,7 +6,7 @@ import shutil
 from pysimplehttpdownloader.http_downloader import HTTPDownloader
 
 
-path = os.path.join(os.path.dirname(os.path.abspath(__file__)),"tmp", "download")
+path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "tmp", "download")
 
 
 class TestPFS(unittest.TestCase):
@@ -15,9 +15,9 @@ class TestPFS(unittest.TestCase):
         try:
             os.mkdir(path)
         except OSError:
-            print("Creation of the directory %s failed" % path)
+            print("\nCreation of the directory %s failed" % path)
         else:
-            print("Successfully created the directory %s " % path)
+            print("\nSuccessfully created the directory %s " % path)
 
     def tearDown(self):
         try:
