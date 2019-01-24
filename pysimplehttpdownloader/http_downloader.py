@@ -10,6 +10,8 @@ class HTTPDownloader(object):
     @staticmethod
     def __reporthook__(blocknum, blocksize, totalsize):
         readsofar = blocknum * blocksize
+        if readsofar > totalsize:
+            readsofar = totalsize
         if totalsize > 0:
             percent = readsofar * 1e2 / totalsize
             s = "\r%5.1f%% %*d / %d" % (
