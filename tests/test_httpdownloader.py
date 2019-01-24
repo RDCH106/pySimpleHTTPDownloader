@@ -5,9 +5,12 @@ import os
 import shutil
 
 
+path = os.path.dirname(os.path.abspath(__file__)) + "/tmp/download"
+
+
 class TestPFS(unittest.TestCase):
+
     def setUp(self):
-        path = os.path.dirname(os.path.abspath(__file__)) + "/tmp/download"
         try:
             os.mkdir(path)
         except OSError:
@@ -16,7 +19,12 @@ class TestPFS(unittest.TestCase):
             print("Successfully created the directory %s " % path)
 
     def tearDown(self):
-        pass
+        try:
+            shutil.rmtree(path)
+        except IOError:
+            print("Deletion of the directory %s failed" % path)
+        else:
+            print("Successfully deleted the directory %s " % path)
 
     def test_empty(self):
         print("TO-DO")
