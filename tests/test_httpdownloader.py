@@ -3,6 +3,7 @@
 import unittest
 import os
 import shutil
+from pysimplehttpdownloader.http_downloader import HTTPDownloader
 
 
 path = os.path.join(os.path.dirname(os.path.abspath(__file__)),"tmp", "download")
@@ -26,8 +27,13 @@ class TestPFS(unittest.TestCase):
         else:
             print("Successfully deleted the directory %s " % path)
 
-    def test_empty(self):
-        print("TO-DO")
+    def test_smart_downloader(self):
+        downloader = HTTPDownloader(
+            "https://raw.githubusercontent.com/RDCH106/i-love-firefox/183266a9/I_Love_Firefox_220x56.png",
+            output_path=path
+        )
+        filename, headers = downloader.run()
+        self.assertTrue(os.path.isfile(os.path.join(path, filename)))
 
 
 if __name__ == '__main__':
