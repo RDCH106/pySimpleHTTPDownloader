@@ -1,5 +1,5 @@
 from setuptools import setup
-from parallelforeachsubmodule.metadata import Metadata
+from pysimplehttpdownloader.metadata import Metadata
 
 metadata = Metadata()
 
