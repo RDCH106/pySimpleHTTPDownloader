@@ -5,7 +5,7 @@ import os
 import shutil
 
 
-path = os.path.dirname(os.path.abspath(__file__)) + "/tmp/download"
+path = os.path.join(os.path.dirname(os.path.abspath(__file__)),"tmp", "download")
 
 
 class TestPFS(unittest.TestCase):
