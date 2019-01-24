@@ -33,6 +33,8 @@ class TestPFS(unittest.TestCase):
             output_path=path
         )
         filename, headers = downloader.run()
+        print("download file location: ", filename)
+        print("download headers: ", headers)
         self.assertTrue(os.path.isfile(os.path.join(path, filename)))
 
 
