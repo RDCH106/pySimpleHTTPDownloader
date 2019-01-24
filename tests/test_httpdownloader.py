@@ -37,6 +37,18 @@ class TestPFS(unittest.TestCase):
         print("download headers: ", headers)
         self.assertTrue(os.path.isfile(os.path.join(path, filename)))
 
+    def test_rename_downloader(self):
+        output_name = "image.png"
+        downloader = HTTPDownloader(
+            "https://raw.githubusercontent.com/RDCH106/i-love-firefox/183266a9/I_Love_Firefox_220x56.png",
+            output_path=path,
+            output_name=output_name
+        )
+        filename, headers = downloader.run()
+        print("download file location: ", filename)
+        print("download headers: ", headers)
+        self.assertTrue(os.path.isfile(os.path.join(path, filename)))
+
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)
