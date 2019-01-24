@@ -1,0 +1,15 @@
+language: python
+python:
+  - "3.3"
+  - "3.4"
+  - "3.5"
+  - "3.6"
+# command to install dependencies
+install:
+  - pwd
+  - pip install .
+  - pip install "pytest>=3.10.0"
+# command to run tests
+script:
+- pwd
+- pytest
