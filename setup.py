@@ -22,7 +22,7 @@ Simple HTTP downloader written in Python
 
 
 setup(
-    name = 'simple_http_downloader',
+    name = 'shttpd',
     packages = ['pysimplehttpdownloader'],
     install_requires = requirements(),
     version = metadata.get_version(),
