@@ -33,9 +33,9 @@ setup(
     author_email = 'contact@rdch106.hol.es',
     url = 'https://github.com/RDCH106/pySimpleHTTPDownloader',
     download_url = 'https://github.com/RDCH106/pySimpleHTTPDownloader/archive/v'+metadata.get_version()+'.tar.gz',
-    #entry_points={
-    #    'console_scripts': ['pfs=pysimplehttpdownloader.main:main'],
-    #},
+    entry_points={
+        'console_scripts': ['pfs=pysimplehttpdownloader.main:main'],
+    },
     keywords = 'http downloader',
     classifiers = ['Programming Language :: Python',
                    'Programming Language :: Python :: 3.2',
