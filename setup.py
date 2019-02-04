@@ -34,7 +34,7 @@ setup(
     url = 'https://github.com/RDCH106/pySimpleHTTPDownloader',
     download_url = 'https://github.com/RDCH106/pySimpleHTTPDownloader/archive/v'+metadata.get_version()+'.tar.gz',
     entry_points={
-        'console_scripts': ['pfs=pysimplehttpdownloader.main:main'],
+        'console_scripts': ['shttpd=pysimplehttpdownloader.main:main'],
     },
     keywords = 'http downloader',
     classifiers = ['Programming Language :: Python',
