@@ -20,6 +20,15 @@ $ cd pysimplehttpdownloader
 $ pip install .
 ```
 
+### Quick example
+
+```bash
+$ shttpd -u https://raw.githubusercontent.com/RDCH106/i-love-firefox/183266a9/I_Love_Firefox_220x56.png
+```
+
+The example downloads `I_Love_Firefox_220x56.png` in current path.
+
+
 ### Help
 
 Run the following command to see all options available:
