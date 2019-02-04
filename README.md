@@ -19,3 +19,9 @@ $ git clone https://github.com/RDCH106/pySimpleHTTPDownloader.git --recursive
 $ cd pysimplehttpdownloader
 $ pip install .
 ```
+
+### Help
+
+Run the following command to see all options available:
+
+`shttpd --help` or ` shttpd -h`
