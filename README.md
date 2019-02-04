@@ -6,6 +6,7 @@
 
 Simple HTTP downloader written in Python
 
+
 ### Installation
 
 You can install or upgrade shttpd with:
@@ -20,13 +21,14 @@ $ cd pysimplehttpdownloader
 $ pip install .
 ```
 
+
 ### Quick example
 
 ```bash
 $ shttpd -u https://raw.githubusercontent.com/RDCH106/i-love-firefox/183266a9/I_Love_Firefox_220x56.png
 ```
 
-The example downloads `I_Love_Firefox_220x56.png` in current path.
+The example downloads `I_Love_Firefox_220x56.png` in current path and shows download progress.
 
 
 ### Help
