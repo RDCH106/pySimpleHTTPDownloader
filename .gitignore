@@ -3,6 +3,8 @@ __pycache__/
 .idea/
 dist
 build
+shttpd.egg-info
+shttpd.spec
 tests/tmp/*
 !tests/tmp/dummy.txt
 **_trial_temp*/
