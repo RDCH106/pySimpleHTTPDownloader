@@ -15,9 +15,42 @@ def requirements():
     return requirements_list
 
 long_description = """"
-pySimpleHTTPDownloader
---------------------------
+pySimpleHTTPDownloader (shttpd)
+===============================
+
 Simple HTTP downloader written in Python
+
+Installation
+~~~~~~~~~~~~
+
+You can install or upgrade shttpd with:
+
+``$ pip install shttpd --upgrade``
+
+Or you can install from source with:
+
+.. code:: bash
+
+   $ git clone https://github.com/RDCH106/pySimpleHTTPDownloader.git --recursive
+   $ cd pysimplehttpdownloader
+   $ pip install .
+
+Quick example
+~~~~~~~~~~~~~
+
+.. code:: bash
+
+   $ shttpd -u https://raw.githubusercontent.com/RDCH106/i-love-firefox/183266a9/I_Love_Firefox_220x56.png
+
+The example downloads ``I_Love_Firefox_220x56.png`` in current path and
+shows download progress.
+
+Help
+~~~~
+
+Run the following command to see all options available:
+
+``shttpd --help`` or ``shttpd -h``
     """
 
 
