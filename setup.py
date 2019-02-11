@@ -14,9 +14,10 @@ def requirements():
 
     return requirements_list
 
-long_description = """"
+long_description = """
+
 pySimpleHTTPDownloader (shttpd)
-===============================
+-------------------------------
 
 Simple HTTP downloader written in Python
 
